@@ -27,10 +27,10 @@ $(function() {
     var adjPost;
 	
 	var noun = $("input[name=noun]").val();
-    var nounPost
+    var nounPost;
 	
 	var verb = $("input[name=verb]").val();
-    var verbPost
+    var verbPost;
 
     if (adjective) {
       adjPost = {word: adjective};
@@ -48,7 +48,7 @@ $(function() {
 		nounPost = {word: verb};
       $.post("verb", verbPost, function(response) {
         var verbRes = response.msg;
-        $("#verbRes").text(nounRes);
+        $("#verbRes").text(verbRes);
       });
 	}
 
